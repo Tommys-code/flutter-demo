@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/widget/database/data_page.dart';
+import 'package:flutter_demo/widget/gesture/dismissed_page.dart';
+import 'package:flutter_demo/widget/gesture/gesture_page.dart';
 import 'package:flutter_demo/widget/home_page.dart';
 import 'package:flutter_demo/widget/lifecycle/lifecycle_page.dart';
 import 'package:flutter_demo/widget/localizations/localizations_demo.dart';
@@ -28,6 +30,8 @@ void main() {
       '/RoutePageWithValue1': (_) => RoutePageWithValue1(),
       '/RoutePageWithValue2': (_) => RoutePageWithValue2(),
       '/DataPage': (_) => DataPage(),
+      '/GesturePage': (_) => GesturePage(),
+      '/DismissedPage': (_) => DismissedPage(),
     },
     home: new HomePage(),
     initialRoute: '/HomePage',

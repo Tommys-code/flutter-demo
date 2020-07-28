@@ -44,6 +44,14 @@ class _DrawerWidgetState extends State<DrawerWidget> {
             Navigator.of(context).popAndPushNamed('/DataPage');
           },
         ),
+        Divider(),
+        ListTile(
+          title: Text('Gesture 学习'),
+          trailing: Icon(Icons.arrow_right),
+          onTap: () {
+            Navigator.popAndPushNamed(context, '/GesturePage');
+          },
+        ),
       ],
     );
   }

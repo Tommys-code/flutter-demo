@@ -7,7 +7,6 @@ import 'package:flutter_demo/widget/database/sql_manager.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sqflite/sqflite.dart';
-import 'package:path/path.dart';
 
 String username = '';
 String pwd = '';
@@ -254,6 +253,7 @@ class _HandleSQLiteDataWidgetState extends State<HandleSQLiteDataWidget> {
     var count = await db.update('user', {'pwd': "ssssss"},
         where: 'id=?', whereArgs: [1]);
     await SqlManager.close();
+    print(count);
     setState(() {
       _result = "更新数据成功，请查看";
     });
@@ -374,7 +374,7 @@ class _HandleFileDataWidgetState extends State<HandleFileDataWidget> {
 
   _add() async {
     File file = new File('$tempPath/user.txt');
-    await file.writeAsString('用户名:$username密码:$pwd',mode: FileMode.append);
+    await file.writeAsString('用户名:$username密码:$pwd', mode: FileMode.append);
     setState(() {
       _result = '写入成功，请查询';
     });
