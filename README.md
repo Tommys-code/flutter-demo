@@ -1,6 +1,6 @@
 # flutter_demo
 
-A new Flutter application.
+api由 https://gank.io/api 提供，本Demo主要用于学习
 
 ## Getting Started
 
