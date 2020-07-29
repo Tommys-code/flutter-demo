@@ -23,7 +23,7 @@ class FLRepositoryImpl implements FLRepository {
 
 Future<List<FLModel>> _getData(int pageNum, int pageSize) async {
   var httpClient = new HttpClient();
-  var url = Constant.baseUrl + 'category/Girl/type/Girl/page/$pageNum/count/$pageSize';
+  var url = Constant.baseUrl + 'data/category/Girl/type/Girl/page/$pageNum/count/$pageSize';
 
   print(url);
   List flModels;

@@ -21,7 +21,7 @@ class GankRepoImpl implements GankRepo {
 Future<List<GankModel>> _getData(String type, int pageNum, int pageSize) async {
   var httpClient = new HttpClient();
   var url = Constant.baseUrl +
-      'category/GanHuo/type/$type/page/$pageNum/count/$pageSize';
+      'data/category/GanHuo/type/$type/page/$pageNum/count/$pageSize';
 
   print(url);
   List gkModels;

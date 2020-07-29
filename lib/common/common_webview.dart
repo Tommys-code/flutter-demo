@@ -34,10 +34,10 @@ class _CommonWebViewState extends State<CommonWebView> {
   }
 
   Future<bool> _goBack() async {
-    if (flutterWebViewPlugin.canGoBack() != null) {
-      flutterWebViewPlugin.goBack();
-      return false;
-    }
-    return true;
+//    if (flutterWebViewPlugin.canGoBack() != null) {
+//      flutterWebViewPlugin.goBack();
+//      return false;
+//    }
+    return !(await flutterWebViewPlugin.canGoBack());
   }
 }

@@ -1,5 +1,5 @@
 class Constant {
-  static const String baseUrl = "http://gank.io/api/v2/data/";
+  static const String baseUrl = "http://gank.io/api/v2/";
 
   static const String gifImgUrl =
       'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595937509864&di=e5b6bf39385bd88109bc34353718f8af&imgtype=0&src=http%3A%2F%2Fbjimg.focus.cn%2Fupload%2Fphotos%2F128%2F8BYzSdXP.gif';
