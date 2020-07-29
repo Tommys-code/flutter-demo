@@ -37,7 +37,9 @@ dependencies:
   #sqflite
   sqflite: ^1.0.0
   #path_provider插件
-  path_provider: 0.4.1
+  path_provider: ^0.5.0+1
+  cached_network_image: ^2.0.0-rc
+  transparent_image: ^0.1.0
 
 dev_dependencies:
   flutter_test:
