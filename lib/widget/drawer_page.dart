@@ -9,6 +9,7 @@ class DrawerWidget extends StatefulWidget {
 class _DrawerWidgetState extends State<DrawerWidget> {
   List<PageModel> list = [
     PageModel('lifecycle 学习', '/LifecyclePage'),
+    PageModel('基础Widget 学习', '/BaseWidgetPage'),
     PageModel('Route 学习', '/RoutePage'),
     PageModel('数据存储 学习', '/DataPage'),
     PageModel('Gesture 学习', '/GesturePage'),

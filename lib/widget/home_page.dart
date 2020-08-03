@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
     super.dispose();
   }
 
-  var _curIndex = 0;
+  var _curIndex = 1;
   var _body;
 
   _initPage() {

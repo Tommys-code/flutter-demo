@@ -41,6 +41,7 @@ dependencies:
   cached_network_image: ^2.0.0-rc
   transparent_image: ^0.1.0
   dio: ^3.0.9
+  english_words: ^3.1.0
 
 dev_dependencies:
   flutter_test:
@@ -64,6 +65,8 @@ flutter:
   assets:
     - images/ic_assignment_ind_36pt.png
     - images/lifecycle.png
+    - images/avatar.png
+    - images/head.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
