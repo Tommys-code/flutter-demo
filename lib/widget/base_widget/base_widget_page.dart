@@ -10,6 +10,7 @@ class BaseWidgetPage extends StatefulWidget {
 class _BaseWidgetPageState extends State<BaseWidgetPage> {
   List<PageModel> list = [
     PageModel('Text和Button', '/TextAndButtonWidget'),
+    PageModel('TextField和Form', '/TextFieldAndFormPage'),
     PageModel('Image', '/ImageWidget'),
     PageModel('Switch-CheckBox-Radio', '/SwitchAndCheckBoxAndRadioWidget'),
     PageModel('布局组件', '/RowAndColumnPage'),
@@ -18,6 +19,9 @@ class _BaseWidgetPageState extends State<BaseWidgetPage> {
     PageModel('Clip', '/ClipPage'),
     PageModel('无限加载列表', '/InfiniteListViewPage'),
     PageModel('CustomScrollView', '/CustomScrollViewPage'),
+    PageModel('颜色和主题', '/ColorAndThemePage'),
+    PageModel('异步UI更新', '/AsyncPage'),
+    PageModel('对话框', '/DialogPage'),
   ];
 
   @override
@@ -28,6 +32,7 @@ class _BaseWidgetPageState extends State<BaseWidgetPage> {
         centerTitle: true,
       ),
       body: ListView.separated(
+          physics: BouncingScrollPhysics(),
           itemBuilder: _itemBuild,
           separatorBuilder: (BuildContext context, int index) =>
               Divider(color: Colors.blue),

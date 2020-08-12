@@ -45,5 +45,8 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+
+        <activity android:name=".OneActivity"/>
+        <activity android:name=".TwoActivity"/>
     </application>
 </manifest>

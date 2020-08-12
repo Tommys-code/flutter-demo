@@ -38,9 +38,12 @@ class _TextAndButtonWidget extends State<TextAndButtonWidget> {
     String fontFamily, // 字体
    */
 
+  GlobalKey _key = GlobalKey<ScaffoldState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _key,
       appBar: AppBar(
         title: Text('Text和Button 学习'),
         centerTitle: true,
@@ -125,6 +128,16 @@ class _TextAndButtonWidget extends State<TextAndButtonWidget> {
                       borderRadius: BorderRadius.circular(20)),
                 ),
               ),
+              Center(child: _buildButton()),
+              Align(
+                alignment: Alignment.topRight,
+                child: _buildPopMenuButton(context),
+              ),
+              Banner(
+                message: 'banner',
+                location: BannerLocation.topEnd,
+                color: Colors.blue,
+              ),
             ],
           );
         },
@@ -137,5 +150,55 @@ class _TextAndButtonWidget extends State<TextAndButtonWidget> {
   _showSnackBar(BuildContext context, String content) {
     final snackBar = SnackBar(content: Text(content));
     Scaffold.of(context).showSnackBar(snackBar);
+  }
+
+  var _dropValue = '语文';
+
+  _buildButton() {
+    return DropdownButton(
+      value: _dropValue,
+      items: [
+        DropdownMenuItem(child: Text('语文'), value: '语文'),
+        DropdownMenuItem(child: Text('数学'), value: '数学'),
+        DropdownMenuItem(child: Text('英语'), value: '英语'),
+      ],
+      onChanged: (value) {
+        setState(() {
+          _dropValue = value;
+        });
+      },
+    );
+  }
+
+  _buildPopMenuButton(BuildContext context) {
+    return PopupMenuButton<String>(
+      onSelected: (v) {
+        _showSnackBar(context, v);
+      },
+      itemBuilder: (context) {
+        return <PopupMenuEntry<String>>[
+          PopupMenuItem<String>(
+            value: '语文',
+            child: Text('语文'),
+          ),
+          PopupMenuItem<String>(
+            value: '数学',
+            child: Text('数学'),
+          ),
+          PopupMenuItem<String>(
+            value: '英语',
+            child: Text('英语'),
+          ),
+          PopupMenuItem<String>(
+            value: '生物',
+            child: Text('生物'),
+          ),
+          PopupMenuItem<String>(
+            value: '化学',
+            child: Text('化学'),
+          ),
+        ];
+      },
+    );
   }
 }

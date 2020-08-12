@@ -15,6 +15,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
     PageModel('Gesture 学习', '/GesturePage'),
     PageModel('加载图片 学习', '/LoadImgPage'),
     PageModel('网络请求 学习', '/NetworkPage'),
+    PageModel('进阶 学习', '/AdvancedPage'),
   ];
 
   @override

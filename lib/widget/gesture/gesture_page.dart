@@ -9,6 +9,9 @@ class GestureAppPage extends StatefulWidget {
 class _GestureAppPageState extends State<GestureAppPage> {
   var tapEvent = '';
 
+  //定义一个状态，保存当前指针位置
+  PointerEvent _event;
+
   _showSnakeBar(String str) {
     final snackBar = SnackBar(content: new Text(str));
     Scaffold.of(context).showSnackBar(snackBar);
@@ -99,6 +102,19 @@ class _GestureAppPageState extends State<GestureAppPage> {
                 },
                 child: BorderButton('Dismissed 手势'),
               )),
+          SizedBox(height: 20),
+          Listener(
+            child: Container(
+              alignment: Alignment.center,
+              color: Colors.blue,
+              width: 300.0,
+              height: 150.0,
+              child: Text(_event?.toString()??"",style: TextStyle(color: Colors.white)),
+            ),
+            onPointerUp: (PointerUpEvent event) => setState(()=>_event=event),
+            onPointerDown: (PointerDownEvent event) => setState(()=>_event=event),
+            onPointerMove: (PointerMoveEvent event) => setState(()=>_event=event)
+          )
         ],
       ),
     );

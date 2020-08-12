@@ -6,11 +6,16 @@ class CustomScrollViewPage extends StatelessWidget{
   Widget build(BuildContext context) {
     return Material(
       child: CustomScrollView(
+        physics: BouncingScrollPhysics(),
         slivers: <Widget>[
           SliverAppBar(
             pinned: true,
-            expandedHeight: 250,
+            expandedHeight: 200,
+            stretch: true,
             flexibleSpace: FlexibleSpaceBar(
+              stretchModes: [
+                StretchMode.blurBackground,StretchMode.zoomBackground
+              ],
               title: const Text('Demo'),
               background: Image.network(
                 "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596199379590&di=9ab3255286fce4923ce4c23ff1e2c45a&imgtype=0&src=http%3A%2F%2Fa0.att.hudong.com%2F56%2F12%2F01300000164151121576126282411.jpg", fit: BoxFit.cover,),
@@ -38,7 +43,6 @@ class CustomScrollViewPage extends StatelessWidget{
               ),
             ),
           ),
-          //List
           SliverFixedExtentList(
             itemExtent: 50.0,
             delegate: new SliverChildBuilderDelegate(
