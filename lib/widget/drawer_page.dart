@@ -16,6 +16,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
     PageModel('加载图片 学习', '/LoadImgPage'),
     PageModel('网络请求 学习', '/NetworkPage'),
     PageModel('进阶 学习', '/AdvancedPage'),
+    PageModel('EasyRefresh', '/EmptyPage'),
   ];
 
   @override

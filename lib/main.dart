@@ -19,6 +19,7 @@ import 'package:flutter_demo/widget/base_widget/textfield_form_page.dart';
 import 'package:flutter_demo/widget/common/hide_and_show_page.dart';
 import 'package:flutter_demo/widget/custom_widget/custom_page.dart';
 import 'package:flutter_demo/widget/database/data_page.dart';
+import 'package:flutter_demo/widget/easyrefresh/easy_refresh_page.dart';
 import 'package:flutter_demo/widget/gesture/dismissed_page.dart';
 import 'package:flutter_demo/widget/gesture/drag_page.dart';
 import 'package:flutter_demo/widget/gesture/gesture_page.dart';
@@ -78,6 +79,7 @@ void main() {
       '/AnimationWidgetPage': (_) => AnimationWidgetPage(),
       '/ChannelPage': (_) => ChannelPage(),
       '/CustomPage': (_) => CustomPage(),
+      '/EmptyPage': (_) => EmptyPage(),
 
       //基础控件
       '/TextAndButtonWidget': (_) => TextAndButtonWidget(),

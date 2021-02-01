@@ -98,6 +98,7 @@ class _TextFieldAndFormPageState extends State<TextFieldAndFormPage> {
                   TextFormField(
                       controller: _pwdController,
                       decoration: InputDecoration(
+                        suffixIcon: Icon(Icons.clear),
                           labelText: "密码",
                           hintText: "您的登录密码",
                           icon: Icon(Icons.lock)),
@@ -137,6 +138,13 @@ class _TextFieldAndFormPageState extends State<TextFieldAndFormPage> {
               ),
             ),
           ),
+          TextField(
+            decoration: InputDecoration(
+              hintText: "111111111",
+              prefixIcon: Text('111',textAlign: TextAlign.center,),
+              prefixIconConstraints: BoxConstraints()
+            ),
+          )
         ],
       ),
     );
